@@ -18,9 +18,10 @@ const Home = () => {
     <div className="home-container">
       <div>
         <img className="logo" src="/logo.png" alt="" />
-        <h2>Hi Trainer!</h2>
-        <p>Type your name to start...</p>
+
          <form onSubmit={(e) => handleSubmit(e)} className="login-form">
+         <h2>Hi Trainer!</h2>
+        <p>Type your name to start...</p>
           <div className="input-style">
             <label htmlFor="name"></label>
             <input

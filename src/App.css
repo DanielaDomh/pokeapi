@@ -75,11 +75,6 @@ h2 {
   top: 70%;
 }
 
-.login-message {
-  text-align: center;
-  font-size: var(--small-size);
-  margin-bottom: 1rem;
-}
 
 .welcome-message {
   text-align: center;
