@@ -29,16 +29,18 @@ const PokeData = () => {
 
   return (
     <div className="background" style={{ backgroundColor: backgroundColor(data.types?.[0].type.name)}}>
-
-     <h1>{data.name}</h1>
+      <img className="logopokemon" src="logopokemon.png" alt="" />
+      <div className="first-container">
+     <h1 className="name">{data.name}</h1>
      <img className="pokebal-detail" src="/pokebola1.png" alt="" />
      <img className="image-detail" src={data.sprites?.other.dream_world.front_default} alt="" />
-     <p>Weight:{data.weight}</p>
-      <p>Height:{data.height}</p>
-      <p>Type: <br />
-      {data.types?.[0].type.name}</p>
-      <p>Abilities: <br />
-        {data.abilities?.[0].ability.name} {data.abilities?.[1].ability.name}
+     <p className="weight">Weight</p>
+     <p className="weight-cont">{data.weight}</p>
+      <p className="height">Height</p>
+      <p className="height-cont">{data.height}</p>
+      </div>
+      <p className="type">Type: <br /> {data.types?.[0].type.name}</p>
+      <p className="abilities">Abilities: <br /> {data.abilities?.[0].ability.name} {data.abilities?.[1].ability.name}
       </p>
     </div>
   );
