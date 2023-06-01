@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Pokedex from "./pages/Pokedex";
 import PokeData from "./components/PokeData";
+import ProtectRoutes from "./components/ProtectRoutes";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           path="/"
           element={<Home/>}
           />
+          <Route element={ <ProtectRoutes/> } >
           <Route
           path="/pokedex"
           element={<Pokedex/>}
@@ -26,6 +28,7 @@ function App() {
           path="/pokedex/:id"
           element={<PokeData/>}
           />
+          </Route>
         </Routes>
       </HashRouter>
     </div>

@@ -50,7 +50,7 @@ button {
 
 input {
   background-color: var(--third-color);
-  color: var(--fourth-color);
+  color: var(--second-color);
   border: none;
   padding: 1rem 5rem 1rem 1rem;
 }
@@ -149,6 +149,21 @@ h2 {
   text-align: center;
   position: absolute;
   right: 0;
+}
+
+.background{
+  position: absolute;
+  width: 100%;
+  height: 93%;
+}
+
+.pokebal-detail{
+  width: 20%;
+  z-index: 0;
+}
+
+.image-detail{
+  z-index: 1;
 }
 
 

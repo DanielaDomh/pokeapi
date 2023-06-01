@@ -12,7 +12,7 @@ const PokemonCard = ({ data }) => {
       .catch((error) => console.error(error));
   }, []);
 
-  //Estilado condicionado con el type de cada Pokemon
+  //Estilado condicional con el type de cada Pokemon
   const backgroundColor = (type) => {
     if (["grass", "poison", "earth", "bug","ground","rock"].includes(type)) {
       return "#4DAD5B";

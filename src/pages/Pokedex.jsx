@@ -1,9 +1,9 @@
 import axios from "axios";
 import PokemonCard from "../components/PokemonCard";
 import { useState, useEffect } from "react";
-import PokeData from "../components/PokeData";
+import { useSelector } from "react-redux";
 
-const Pokedex = () => {
+const Pokedex = ({userName}) => {
   const [pokemonList, setPokemonList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -31,17 +31,14 @@ const Pokedex = () => {
     setCurrentPage(currentPage - 1);
   };
 
+  const username = useSelector((state) => state.username)
+
   return (
     <div>
       <h1>POKEDEX</h1>
       <p className="welcome-message">
-        Hi! Welcome, Here you can find your favourite Pokemon!
+        Hi! {username} and welcome, Here you can find your favourite Pokemon!
       </p>
-      {/* <form action="">
-            <label htmlFor=""></label>
-            <input type="text" />
-            <button type="toggle">hola</button>
-      </form>  */}
       <div className="button-content">
         <button
         disabled={currentPage === 1}
